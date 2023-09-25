@@ -1,9 +1,10 @@
-// import './Banner.css'
+import '../Banner.css'
 const Banner = () => {
   return (
     <div>
-      <div className="text-center  my-36">
-        <h1 className="text-[#0B0B0B] text-5xl font-bold">
+      <div className="text-center back">
+        <div className='bg-[#ffffffc9] py-36'>
+          <h1 className="text-[#0B0B0B] text-5xl font-bold">
           I Grow By Helping People In Need
         </h1>
         <input
@@ -14,6 +15,8 @@ const Banner = () => {
         <button className="rounded-r-lg p-3 px-5 -ml-[3px] bg-[#FF444A]">
           Search
         </button>
+        </div>
+        
       </div>
     </div>
   );
