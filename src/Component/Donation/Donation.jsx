@@ -4,7 +4,7 @@ import { getStoredCard } from "../Utility/LocalStorage";
 
 const Donation = () => {
   const cards = useLoaderData();
-  
+
   const [donatedCards, setDonatedCards] = useState([]);
   const [dataLength, setDataLength] = useState(4);
 
@@ -35,9 +35,9 @@ const Donation = () => {
               className="rounded-lg"
             >
               <div className="flex gap-3">
-                <figure>
+                <figure className="w-[200px]">
                   <img
-                    className="w-[220px] h-[170px] rounded-lg"
+                    className="w-full h-full rounded-lg"
                     src={card.picture}
                   />
                 </figure>
@@ -47,28 +47,40 @@ const Donation = () => {
                     style={{
                       background: card.color_card_bg,
                       color: card.color_text_button,
-                    }}>
+                    }}
+                  >
                     {card.category}
                   </h2>
-                  <h2 className="font-semibold mt-3 text-xl text-black">{card.title}</h2>
+                  <h2 className="font-semibold mt-3 text-xl text-black">
+                    {card.title}
+                  </h2>
                   <p className="font-semibold">$ {card.price}.00</p>
-                  <button 
-                  className="px-4 py-2 rounded-lg font-semibold"
-                  style={{background: card.color_text_button, color:'white'}}
-                  >View Details</button>
+                  <button
+                    className="px-4 py-2 rounded-lg font-semibold"
+                    style={{
+                      background: card.color_text_button,
+                      color: "white",
+                    }}
+                  >
+                    View Details
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         ))}
       </div>
-      <div className={dataLength === cards.length && "hidden"}>
-      <div className="my-8 flex justify-center">
-        <button 
-        onClick={() => setDataLength(cards.length)}
-        className="text-white py-3 rounded-lg px-6 bg-[#009444]"
-        >See All</button>
-      </div>
+      <div className={donatedCards.length <= 4 && "hidden"}>
+        <div className={dataLength === cards.length && "hidden"}>
+          <div className="my-8 flex justify-center">
+            <button
+              onClick={() => setDataLength(cards.length)}
+              className="text-white py-3 rounded-lg px-6 bg-[#009444]"
+            >
+              See All
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ import "../Home/Banner.css";
 const Root = () => {
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="px-[70px]  bg-[#ffffffe8]">
+      <div className="lg:px-[70px] p-2 bg-[#ffffffe8]">
         <div className="">
           <Header></Header>
           <Outlet></Outlet>

@@ -4,21 +4,45 @@ const Header = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/"
+        className={({ isActive, isPending }) =>
+        isActive
+          ? "text-[#FF444A] underline font-bold"
+          : isPending
+          ? "pending"
+          : ""
+      }
+        >Home</NavLink>
       </li>
       <li>
-        <NavLink to="/donation">Donation</NavLink>
+        <NavLink to="/donation"
+        className={({ isActive, isPending }) =>
+        isActive
+          ? "text-[#FF444A] underline font-bold"
+          : isPending
+          ? "pending"
+          : ""
+      }
+        >Donation</NavLink>
       </li>
       <li>
-        <NavLink to="/statistics">Statistics</NavLink>
+        <NavLink to="/statistics"
+        className={({ isActive, isPending }) =>
+        isActive
+          ? "text-[#FF444A] underline font-bold"
+          : isPending
+          ? "pending"
+          : ""
+      }
+        >Statistics</NavLink>
       </li>
     </>
   );
   return (
     <div className="navbar px-0 flex justify-between">
-      <div className="navbar-start">
+      <div className="navbar-start flex gap-20">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+          <label tabIndex={0} className="btn lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -36,15 +60,15 @@ const Header = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className=" menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {links}
           </ul>
         </div>
-        <img className="w-[150px]" src="../../../src/img/Logo.png" alt="" />
+          <img className="w-[150px]" src="../../../src/img/Logo.png" alt="" />
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
+        <ul className="gap-10 menu-horizontal px-1">{links}</ul>
       </div>
     </div>
   );

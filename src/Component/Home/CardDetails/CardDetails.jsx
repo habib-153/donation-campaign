@@ -17,7 +17,7 @@ const CardDetails = () => {
     return (
         <div>
             <div>
-                <img className="w-full h-[500px] rounded-xl" src={card.picture}alt="" />
+                <img className="w-full md:h-[500px] rounded-xl" src={card.picture}alt="" />
                 <div className="bg-[#0b0b0bb2] p-5 relative bottom-24 rounded-xl">
                     <button 
                     onClick={handleToast}

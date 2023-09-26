@@ -11,7 +11,7 @@ const Card = ({ card }) => {
       className="rounded-lg">
       <div className="">
         <figure>
-          <img src={picture} />
+          <img className="w-full" src={picture} />
         </figure>
         <div className="px-2 py-5">
           <h2
