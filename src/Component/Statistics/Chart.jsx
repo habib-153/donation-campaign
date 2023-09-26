@@ -21,10 +21,10 @@ const Chart = () => {
               donated.push(card);
             }
             setDonatedCards(donated);
-            console.log(cards, storedCardIds, donatedCards);
+            //console.log(cards, storedCardIds, donatedCards);
           }
         }
-      }, [cards, donatedCards]);
+      }, []);
 
   const data = [
     { name: "totalDonation", value: cards.length },
@@ -59,7 +59,7 @@ const Chart = () => {
       {/* <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
           {`${(percent * 100).toFixed(0)}%`}
         </text> */}
-      <PieChart width={400} height={300}>
+      <PieChart width={350} height={300}>
         <Pie
           data={data}
           cx="50%"
