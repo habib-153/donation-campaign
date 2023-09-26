@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import "./Banner.css";
+
 import Banner from "./Banner/Banner";
 import Cards from "./Cards/Cards";
 import Card from "./Card/Card";
@@ -38,6 +38,7 @@ const Home = () => {
       setDisplayCards(clothCard);
       console.log(displayCards);
     }
+    
   };
   return (
     <div>
@@ -51,7 +52,10 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <Cards></Cards>
+      <div>
+        <Cards></Cards>
+      </div>
+      
     </div>
   );
 };

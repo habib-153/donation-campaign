@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import img from "../../img/Logo.png"
 const Header = () => {
   const links = (
     <>
@@ -40,7 +40,7 @@ const Header = () => {
   );
   return (
     <div className="navbar px-0 flex justify-between">
-      <div className="navbar-start flex gap-20">
+      <div className="navbar-start flex gap-20 md:gap-0">
         <div className="dropdown">
           <label tabIndex={0} className="btn lg:hidden">
             <svg
@@ -65,7 +65,7 @@ const Header = () => {
             {links}
           </ul>
         </div>
-          <img className="w-[150px]" src="../../../src/img/Logo.png" alt="" />
+          <img className="w-[150px]" src={img} alt="" />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="gap-10 menu-horizontal px-1">{links}</ul>

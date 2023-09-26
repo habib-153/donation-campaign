@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import './index.css'
-import './Component/Home/Banner.css'
+
 import Root from './Component/Root/Root';
 import Home from './Component/Home/Home';
 import Donation from './Component/Donation/Donation';

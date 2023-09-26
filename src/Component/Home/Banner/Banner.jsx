@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import '../Banner.css'
+import './Banner.css'
 
 
 const Banner = ({handleSearchBtn}) => {

@@ -18,7 +18,7 @@ const Donation = () => {
           donated.push(card);
         }
         setDonatedCards(donated);
-        //console.log(cards, storedCardIds, donated);
+        //console.log(storedCardIds);
       }
     }
   }, [cards]);
